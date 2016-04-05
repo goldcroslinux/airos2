@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A769A8EF-5884-4A16-B716-81DE64CD745A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>air_os.My.MyApplication</StartupObject>
+    <RootNamespace>air_os</RootNamespace>
+    <AssemblyName>air os</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>air os.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>air os.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Air OS 2\AirOS icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Awesomium.Core, Version=1.7.5.1, Culture=neutral, PublicKeyToken=e1a0d7c8071a5214, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BrowserTutorial\BrowserTutorial\bin\Debug\Awesomium.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Awesomium.Windows.Forms, Version=1.7.5.1, Culture=neutral, PublicKeyToken=9bd24830fbe304a0, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BrowserTutorial\BrowserTutorial\bin\Debug\Awesomium.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="FastColoredTextBox">
+      <HintPath>..\..\..\BrowserTutorial\bin\x86\Release\FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Air OS 2\AppSystem\OSAppBase.vb" />
+    <Compile Include="Air OS 2\Desktop\ayarlar.Designer.vb">
+      <DependentUpon>ayarlar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Air OS 2\Desktop\ayarlar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Air OS 2\TaskbarItem.Designer.vb">
+      <DependentUpon>TaskbarItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Air OS 2\TaskbarItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Air OS 2\BootLogin\Booter.Designer.vb">
+      <DependentUpon>Booter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Air OS 2\BootLogin\Booter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Air OS 2\BootLogin\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Air OS 2\BootLogin\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Air OS 2\Desktop\Desktop.Designer.vb">
+      <DependentUpon>Desktop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Air OS 2\Desktop\Desktop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Air OS 2\Helpers\ABRenderer.vb" />
+    <Compile Include="Air OS 2\Helpers\AirOS.vb" />
+    <Compile Include="Air OS 2\Helpers\DWM.vb" />
+    <Compile Include="Air OS 2\Helpers\ExButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Air OS 2\Helpers\Functions.vb" />
+    <Compile Include="Air OS 2\Helpers\MenuRenderer.vb" />
+    <Compile Include="Air OS 2\Helpers\PipesClient.vb" />
+    <Compile Include="Air OS 2\Helpers\PipeServer.vb" />
+    <Compile Include="Air OS 2\AirOSAppFramework\AirOSMethods.vb" />
+    <Compile Include="Air OS 2\AirOSAppFramework\ExıtButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Air OS 2\AirOSAppFramework\Functionsa.vb" />
+    <Compile Include="Air OS 2\AirOSAppFramework\PipesClien.vb" />
+    <Compile Include="Air OS 2\AirOSAppFramework\PipeServr.vb" />
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Air OS 2\system apps\browsertotorial\BrowserTab.designer.vb">
+      <DependentUpon>BrowserTab.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Air OS 2\system apps\browsertotorial\BrowserTab.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Air OS 2\system apps\browsertotorial\form1.designer.vb">
+      <DependentUpon>form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Air OS 2\system apps\browsertotorial\form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Air OS 2\system apps\browsertotorial\OtherClasses\DownloadBarItem.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Air OS 2\system apps\browsertotorial\OtherClasses\Favorite.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Air OS 2\system apps\browsertotorial\Forms\DevTools.Designer.vb">
+      <DependentUpon>DevTools.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Air OS 2\system apps\browsertotorial\Forms\DevTools.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Air OS 2\system apps\browsertotorial\Forms\History.Designer.vb">
+      <DependentUpon>History.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Air OS 2\system apps\browsertotorial\Forms\History.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Air OS 2\system apps\browsertotorial\Forms\PageInfoDialog.Designer.vb">
+      <DependentUpon>PageInfoDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Air OS 2\system apps\browsertotorial\Forms\PageInfoDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Air OS 2\system apps\browsertotorial\Forms\Settings.Designer.vb">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Air OS 2\system apps\browsertotorial\Forms\Settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.vb">
+      <DependentUpon>UserControl1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Air OS 2\Desktop\ayarlar.resx">
+      <DependentUpon>ayarlar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Air OS 2\TaskbarItem.resx">
+      <DependentUpon>TaskbarItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Air OS 2\BootLogin\Booter.resx">
+      <DependentUpon>Booter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Air OS 2\BootLogin\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Air OS 2\Desktop\Desktop.resx">
+      <DependentUpon>Desktop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Air OS 2\system apps\browsertotorial\BrowserTab.resx">
+      <DependentUpon>BrowserTab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Air OS 2\system apps\browsertotorial\form1.resx">
+      <DependentUpon>form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Air OS 2\system apps\browsertotorial\Forms\DevTools.resx">
+      <DependentUpon>DevTools.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Air OS 2\system apps\browsertotorial\Forms\History.resx">
+      <DependentUpon>History.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Air OS 2\system apps\browsertotorial\Forms\PageInfoDialog.resx">
+      <DependentUpon>PageInfoDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Air OS 2\system apps\browsertotorial\Forms\Settings.resx">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Air OS 2\App.config" />
+    <None Include="App.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Air OS 2\Air OS 2.vbproj" />
+    <Content Include="Air OS 2\Helpers\AirBrowse.ico" />
+    <Content Include="Air OS 2\AirOS icon.ico" />
+    <Content Include="Air OS 2\AirOSAppFramework\AirOSAppFramework.vbproj" />
+    <None Include="Resources\Folders-OS-Groups-Metro-icon.png" />
+    <None Include="Resources\Folders-OS-Linux-Metro-icon.png" />
+    <None Include="Resources\file-code-icon.png" />
+    <None Include="Resources\throbber.gif" />
+    <None Include="Resources\Stop Icon.png" />
+    <None Include="Resources\Refresh Icon.png" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\NewStarYellow.png" />
+    <None Include="Resources\NewStar.png" />
+    <None Include="Resources\Menu Icon.png" />
+    <None Include="Resources\lockgreen.png" />
+    <None Include="Resources\image.png" />
+    <None Include="Resources\image.jpg" />
+    <None Include="Resources\Home Icon.png" />
+    <None Include="Resources\globe.png" />
+    <None Include="Resources\Forward Icon.png" />
+    <None Include="Resources\Back Icon.png" />
+    <None Include="Resources\AirBrowse Technologies logo.png" />
+    <None Include="Resources\winclose.png" />
+    <None Include="Resources\winminimize.png" />
+    <None Include="Resources\winmaximize.png" />
+    <None Include="Resources\systemsettings.png" />
+    <None Include="Resources\person.png" />
+    <None Include="Resources\material.png" />
+    <None Include="Resources\codelab icon.png" />
+    <None Include="Resources\applauncher.png" />
+    <None Include="Resources\AirOS icon.png" />
+    <None Include="Resources\AirMusic1.png" />
+    <None Include="Resources\AirBrowse.png" />
+    <None Include="Resources\air os logo.png" />
+    <None Include="Resources\aboutairos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Air OS 2\system apps\store\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
